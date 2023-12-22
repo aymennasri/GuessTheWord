@@ -3,7 +3,6 @@ reset=document.querySelector(".btn")
 hintIn=document.querySelector("#hint")
 guess=document.querySelector("#numL")
 wrong=document.querySelector("#wrongl")
-allIn=document.querySelectorAll(".inputs")
 
 const words = [
     {word: "python", hint: "Famous among Data Science lovers"},
