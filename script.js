@@ -25,14 +25,14 @@ const words = [
     {word: "perl",hint :"The Swiss Army knife of programming languages"}
 ]
 
-//declaration of necessary variables depending on the word
+//Declaration of necessary variables depending on the word
 
 let word
 let guessN
 let letters = new Set()
 let correctG = new Set()
 
-//randomization of the word for each game
+//Randomization of the word for each game
 
 function random(){
     let rand=words[Math.trunc(Math.random()*words.length)]
@@ -53,7 +53,7 @@ function random(){
 }
 random()
 
-//main code inside of a game of guessing the word
+//Main code inside of a game of guessing a word
 
 reset.addEventListener("click",random)
 document.addEventListener("keydown",event =>{
