@@ -1,8 +1,13 @@
+//Returning necessary variables to change in HTML according to the game 
+//except for inputs because it's an unchangeable word for each game (and the button too)
+
 const inputs = document.querySelector(".inputs")
-reset=document.querySelector(".btn")
 hintIn=document.querySelector("#hint")
 guess=document.querySelector("#numL")
 wrong=document.querySelector("#wrongl")
+reset=document.querySelector(".btn")
+
+//Words to be discovered
 
 const words = [
     {word: "python", hint: "Famous among Data Science lovers"},
@@ -20,10 +25,14 @@ const words = [
     {word: "perl",hint :"The Swiss Army knife of programming languages"}
 ]
 
+//declaration of necessary variables depending on the word
+
 let word
 let guessN
 let letters = new Set()
 let correctG = new Set()
+
+//randomization of the word for each game
 
 function random(){
     let rand=words[Math.trunc(Math.random()*words.length)]
@@ -43,6 +52,8 @@ function random(){
     correctG.clear()
 }
 random()
+
+//main code inside of a game of guessing the word
 
 reset.addEventListener("click",random)
 document.addEventListener("keydown",event =>{
